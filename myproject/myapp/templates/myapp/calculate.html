@@ -69,21 +69,28 @@
         <h1>Apoorva Auto Components - Scrap Calculator</h1>
         <form method="post" action="{% url 'calculate_scrap' %}">
             {% csrf_token %}
-            <label for="component_length">Enter the length of the component (in meters):</label>
-            <input type="text" name="component_length">
-            
-            <label for="component_weight">Enter the weight of a single component produced (in Kg):</label>
-            <input type="text" name="component_weight">
-            
             <label for="rod_weight">Enter the weight of a single rod (in Kg):</label>
             <input type="text" name="rod_weight">
-            
-            <label for="rod_length">Enter the rod length (in meters):</label>
+
+            <label for="component_weight">Enter the weight of a single component produced (in Kg):</label>
+            <input type="text" name="component_weight">
+
+            <label for="rod_length">Enter the rod length (in mm):</label>
             <input type="text" name="rod_length">
+
+            <label for="end_bit">Enter the end bit (in mm):</label>
+            <input type="text" name="end_bit">
+
+            <label for="component_length">Enter the length of the component (in mm):</label>
+            <input type="text" name="component_length">
+
+
+            
+
             
             <input type="submit" value="Calculate">
         </form>
-        <p class="credentials">Designed by Nikhil BG</p>
+        <p class="credentials">Designed & Developed by Nikhil BG</p>
     </div>
 </body>
 </html>
