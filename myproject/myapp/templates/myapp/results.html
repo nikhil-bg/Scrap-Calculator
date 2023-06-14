@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Scrap Calculator - Result</title>
+    <style>
+        body {
+            background-color: #E8F6FA;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            text-align: center;
+            padding: 30px;
+            background-color: #FFFFFF;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #283593;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #283593;
+            font-size: 18px;
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Total scrap generated: {{ scrap_product.scrap_value }} kg (approx.)</h1>
+        <p>Apoorva Auto Components - Scrap Calculator Result </p>
+        <p class="credentials">Designed by Nikhil BG</p>
+    </div>
+</body>
+</html>

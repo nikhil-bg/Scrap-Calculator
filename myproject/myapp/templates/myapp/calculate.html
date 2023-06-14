@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Scrap Calculator</title>
+    <style>
+        body {
+            background-color: #E8F6FA;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            text-align: center;
+            padding: 30px;
+            background-color: #FFFFFF;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #283593;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #283593;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+        }
+
+        input[type="submit"] {
+            background-color: #283593;
+            color: #FFFFFF;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #1A237E;
+        }
+        
+        p {
+            color: #283593;
+            font-size: 18px;
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Apoorva Auto Components - Scrap Calculator</h1>
+        <form method="post" action="{% url 'calculate_scrap' %}">
+            {% csrf_token %}
+            <label for="component_length">Enter the length of the component (in meters):</label>
+            <input type="text" name="component_length">
+            
+            <label for="component_weight">Enter the weight of a single component produced (in Kg):</label>
+            <input type="text" name="component_weight">
+            
+            <label for="rod_weight">Enter the weight of a single rod (in Kg):</label>
+            <input type="text" name="rod_weight">
+            
+            <label for="rod_length">Enter the rod length (in meters):</label>
+            <input type="text" name="rod_length">
+            
+            <input type="submit" value="Calculate">
+        </form>
+        <p class="credentials">Designed by Nikhil BG</p>
+    </div>
+</body>
+</html>
