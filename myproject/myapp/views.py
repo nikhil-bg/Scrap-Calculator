@@ -7,11 +7,11 @@ def calculate_scrap(request):
         component_weight = float(request.POST.get('component_weight'))
         rod_weight = float(request.POST.get('rod_weight'))
         rod_length = float(request.POST.get('rod_length'))
+        end_bit=float(request.POST.get('end_bit'))
 
         component_length += 2
         gram_weight = component_weight * 1000
-        rod_length -= 200
-        usable_rod = rod_length
+        usable_rod = rod_length - end_bit
         parts_produced = usable_rod / component_length
         makeable_weight = gram_weight * parts_produced
         makeable_kg = makeable_weight / 1000
